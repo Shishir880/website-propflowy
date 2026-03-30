@@ -55,7 +55,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle Button */}
         <button 
-          className="md:hidden relative z-10 p-2 text-neutral-300 hover:text-white transition-colors"
+          className="md:hidden relative z-50 p-2 text-neutral-300 hover:text-white transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
@@ -64,7 +64,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-[#050505] z-0 transition-transform duration-500 ease-in-out flex flex-col pt-24 px-6 md:hidden ${isOpen ? "translate-y-0" : "-translate-y-full"}`}>
+      <div className={`fixed inset-0 bg-[#050505] z-40 transition-all duration-500 ease-in-out flex flex-col pt-24 px-6 md:hidden ${isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
         <nav className="flex flex-col gap-6 text-xl font-heading font-medium text-neutral-300 mb-10">
           <Link href="/services" onClick={() => setIsOpen(false)} className="hover:text-white border-b border-white/5 pb-4">Services</Link>
           <Link href="/proptech" onClick={() => setIsOpen(false)} className="hover:text-[#D4AF37] text-white border-b border-white/5 pb-4">Proptech Solutions</Link>
